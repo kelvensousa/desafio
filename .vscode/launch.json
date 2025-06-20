@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+    {
+        "type": "pwa-node",
+        "request": "launch",
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/index.js"
+    },
+
+        {
+            "type": "msedge",
+            "request": "attach",
+            "name": "Attach to Edge",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open index.html",
+            "url": "file:///c:/Users/kelve/Dio/Projetos/desafio/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open index.html in new window",
+            "url": "file:///c:/Users/kelve/Dio/Projetos/desafio/index.html",
+            "webRoot": "${workspaceFolder}",
+            "sourceMapPathOverrides": {
+                "/src/*": "${workspaceFolder}/*"
+            }
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open index.html in new tab",
+            "url": "file:///c:/Users/kelve/Dio/Projetos/desafio/index.html",
+            "webRoot": "${workspaceFolder}",
+            "sourceMapPathOverrides": {
+                "/src/*": "${workspaceFolder}/*"
+            }
+        }
+    ]
+}

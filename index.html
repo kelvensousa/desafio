@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML para iniciantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="inicio">Bem-vindo ao HTML para iniciantes!</h1>
+    <p>Este é um guia introdutório para aprender HTML, a linguagem de marcação fundamental para a criação de páginas web.</p>
+    <hr>
+    <h2>Conteúdo do curso</h2>
+    <small>Explore os tópicos que serão abordados neste curso.</small>
+    <ul>
+        <li><a href="#comunicacao">Comunicação Client x Server</li></a>
+        <li><a href="#introducao">Introdução ao HTML na prática</a></li>
+        <li><a href="#desafio">Como entregar seu desafio de projeto</a></li>
+        <li><a href="#novidades">HTML5 e suas novidades</a></li>
+        <li><a href="#desenvolvimento">Boas práticas de desenvolvimento</a></li>
+        <li><a href="#referencia">Referências e recursos adicionais</a></li>
+    </ul>
+    <hr>
+    <h2 id="comunicacao">Comunicação Client x Server</h2>
+    <small>Entenda como o navegador se comunica com o servidor para carregar páginas web.</small><br>
+    <small><a href="#inicio">Início</a></small>
+    <h3>Comunicação Client x Server: Entendendo a Troca de Dados na Web</h3>
+    <p>A comunicação Client x Server é um dos pilares fundamentais do funcionamento da internet. Essa arquitetura define como dois elementos distintos interagem: o cliente, geralmente o navegador ou aplicativo do usuário, e o servidor, que hospeda e fornece os dados solicitados.
+    Quando um usuário acessa um site, o cliente envia uma requisição ao servidor. Essa requisição pode ser para carregar uma página, enviar um formulário ou buscar informações. O servidor, por sua vez, processa o pedido e retorna uma resposta contendo os dados solicitados, como arquivos HTML, imagens ou resultados de um banco de dados.
+    Esse modelo de comunicação é baseado no protocolo HTTP (ou HTTPS, sua versão segura), e funciona de forma assíncrona em muitos casos, permitindo uma experiência mais fluida para o usuário.
+    Além disso, ferramentas como APIs RESTful e WebSockets permitem expandir essa interação, proporcionando desde integrações entre sistemas até comunicação em tempo real.
+    Entender essa dinâmica é essencial para quem deseja desenvolver aplicações web modernas e eficientes. A boa prática de estruturar essas trocas de forma clara e segura garante melhor desempenho, escalabilidade e experiência do usuário.</p>
+    
+    <h3>Quais são os protocolos usados na comunicação Client x Server?</h3>
+    <ol>
+        <li><b>HTTP/HTTPS (HyperText Transfer Protocol / Secure):</b> Usado para transferir páginas web. O HTTPS adiciona uma camada de segurança com criptografia SSL/TLS.<small><a href="https://pt.wikipedia.org/wiki/Hyper_Text_Transfer_Protocol_Secure" target="_blank"> Saiba mais...</a></small></li>
+        <li><b>TCP/IP (Transmission Control Protocol / Internet Protocol):</b> A base da comunicação na internet. O TCP garante a entrega dos dados, enquanto o IP cuida do endereçamento e roteamento.<small><a href="https://pt.wikipedia.org/wiki/TCP/IP" target="_blank"> Saiba mais...</a></small></li>
+        <li><b>FTP (File Transfer Protocol):</b> Utilizado para transferência de arquivos entre cliente e servidor.<small><a href="https://pt.wikipedia.org/wiki/Protocolo_de_Transfer%C3%AAncia_de_Arquivos" target="_blank"> Saiba mais...</a></small></li>
+        <li><b>SMTP/IMAP/POP3:</b> Protocolos usados para envio e recebimento de e-mails.<small><a href="https://brasilcloud.com.br/duvidas/qual-diferenca-entre-pop3-imap-smtp/" target="_blank"> Saiba mais...</a></small></li>
+        <li><b>WebSocket:</b> Permite comunicação bidirecional em tempo real, ideal para chats e aplicações interativas.<small><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/WebSockets_API" target="_blank"> Saiba mais...</a></small></li>
+        <li><b>DNS (Domain Name System):</b> Traduz nomes de domínio (como dio.me) para endereços IP compreensíveis pelos servidores.<small><a href="https://www.cloudflare.com/pt-br/learning/dns/what-is-dns/" target="_blank"> Saiba mais...</a></small></li>
+    </ol>
+
+    </p>
+    <hr>
+    <h2 id="introducao">Introdução ao HTML na prática</h2>
+    <small>Aprenda a estruturar uma página web usando HTML.</small><br>
+    <small><a href="#inicio">Início</a></small>
+    <h3>O que é HTML?</h3>
+    <p>HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Ele define a estrutura e o conteúdo de uma página, utilizando elementos como títulos, parágrafos, links, imagens e muito mais.</p>
+    <h3>Como criar uma página HTML simples?</h3>
+    <p>Para criar uma página HTML, você precisa de um editor de texto. Basta seguir este exemplo básico:</p>
+            <pre>
+        <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="pt-BR"&gt;
+        &lt;head&gt;    
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Minha Página HTML&lt;/title&gt;    
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Bem-vindo à minha página!&lt;/h1&gt;
+            &lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;  
+            &lt;a href="https://www.example.com"&gt;Clique aqui&lt;/a&gt; para visitar um site.
+        &lt;/body&gt;
+        &lt;/html&gt;       
+        </code>
+            </pre>
+    <p>Salve o arquivo com a extensão .html e abra-o em um navegador para ver o resultado.</p>
+    <h3>Quais são as principais tags HTML?</h3>
+    <ul>
+        <li><b>&lt;html&gt;:</b> Define o início de um documento HTML.</li>
+        <li><b>&lt;head&gt;:</b> Contém metadados, como título e links para estilos.</li>
+        <li><b>&lt;title&gt;:</b> Define o título da página, que aparece na aba do navegador.</li>
+        <li><b>&lt;body&gt;:</b> Contém o conteúdo visível da página.</li>
+        <li><b>&lt;h1&gt;, &lt;h2&gt;, ... &lt;h6&gt;:</b> Títulos de diferentes níveis.</li>
+        <li><b>&lt;p&gt;:</b> Define um parágrafo de texto.</li>
+        <li><b>&lt;a&gt;:</b> Cria um link para outra página ou site.</li>
+        <li><b>&lt;img&gt;:</b> Insere uma imagem na página.</li>
+        <li><b>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;:</b> Cria listas não ordenadas e ordenadas.</li>
+        <li><b>&lt;div&gt;:</b> Agrupa elementos para estilização ou layout.</li>
+        <li><b>&lt;span&gt;:</b> Agrupa texto inline para estilização.</li>
+        <li><b>&lt;form&gt;:</b> Cria um formulário para entrada de dados.</li>
+        <li><b>&lt;input&gt;:</b> Define campos de entrada em formulários.</li>
+        <li><b>&lt;button&gt;:</b> Cria um botão clicável.</li>
+        <li><b>&lt;table&gt;:</b> Cria uma tabela para exibir dados tabulares.</li>
+        <li><b>&lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;:</b> Define seções semânticas da página, como cabeçalho, rodapé e navegação.</li>
+        <li><b>&lt;article&gt;, &lt;section&gt;, &lt;aside&gt;:</b> Define conteúdo independente, seções e conteúdo relacionado.</li>
+        <li><b>&lt;blockquote&gt;:</b> Define uma citação em bloco.</li>
+        <li><b>&lt;code&gt;:</b> Define um trecho de código.</li>
+        <li><b>&lt;strong&gt;:</b> Define texto com ênfase forte.</li>
+        <li><b>&lt;em&gt;:</b> Define texto com ênfase leve.</li>
+        <li><b>&lt;br&gt;:</b> Insere uma quebra de linha.</li>
+        <li><b>&lt;hr&gt;:</b> Insere uma linha horizontal.</li>
+        <li><b>&lt;meta&gt;:</b> Define metadados, como charset e viewport.</li>
+        <li><b>&lt;link&gt;:</b> Vincula arquivos externos, como folhas de estilo CSS.</li>
+        <li><b>&lt;script&gt;:</b> Inclui scripts JavaScript na página.</li>
+        <li><b>&lt;style&gt;:</b> Define estilos CSS diretamente no HTML.</li>
+        <li><b>&lt;canvas&gt;:</b> Cria uma área para desenho gráfico dinâmico usando JavaScript.</li>
+        <li><b>&lt;audio&gt;:</b> Insere conteúdo de áudio na página.</li>
+        <li><b>&lt;video&gt;:</b> Insere conteúdo de vídeo na página.</li>
+        <li><b>&lt;iframe&gt;:</b> Insere um documento HTML dentro de outro documento.</li>
+        <li><b>&lt;details&gt;:</b> Cria um widget que pode ser expandido ou recolhido para mostrar ou ocultar conteúdo adicional.</li>
+        <li><b>&lt;summary&gt;:</b> Define um resumo visível para o conteúdo dentro de um elemento `<details>`.</li>
+        <li><b>&lt;figure&gt;:</b> Agrupa conteúdo visual, como imagens, gráficos ou diagramas, com uma legenda opcional.</li>
+        <li><b>&lt;figcaption&gt;:</b> Define uma legenda para o conteúdo dentro de um elemento</li>
+        <li><b>&lt;time&gt;:</b> Representa um período de tempo ou uma data específica.</li>
+        <li><b>&lt;mark&gt;:</b> Destaca texto importante ou relevante.</li>
+        <li><b>&lt;progress&gt;:</b> Exibe o progresso de uma tarefa em andamento.</li>
+        <li><b>&lt;meter&gt;:</b> Representa uma medição escalar dentro de um intervalo conhecido, como uma barra de progresso.</li>
+        <li><b>&lt;template&gt;:</b> Define um conteúdo que não é renderizado imediatamente, mas pode ser instanciado posteriormente usando JavaScript.</li>
+        <li><b>&lt;slot&gt;:</b> Usado em Web Components para definir um espaço onde o conteúdo pode ser inserido.</li>
+        <li><b>&lt;dialog&gt;:</b> Cria uma caixa de diálogo ou modal que pode ser aberta ou fechada.</li>
+        <li><b>&lt;kbd&gt;:</b> Representa entrada do teclado, como teclas pressionadas pelo usuário.</li>
+        <li><b>&lt;var&gt;:</b> Representa uma variável em um contexto matemático ou de programação.</li>
+        <li><b>&lt;cite&gt;:</b> Indica o título de uma obra, como um livro, filme ou artigo.</li>
+        <li><b>&lt;abbr&gt;:</b> Define uma abreviação ou acrônimo, com a opção de fornecer uma descrição completa usando o atributo `title`.</li>
+        <li><b>&lt;address&gt;:</b> Fornece informações de contato do autor ou proprietário de um documento.</li>
+        <li><b>&lt;small&gt;:</b> Representa texto de menor importância, como notas de rodapé ou disclaimers.</li>
+        <li><b>&lt;sub&gt;:</b> Define texto como subscrito, geralmente usado em fórmulas químicas ou matemáticas.</li>
+        <li><b>&lt;sup&gt;:</b> Define texto como sobrescrito, comumente usado em notações matemáticas ou científicas.</li>
+        <li><b>&lt;ins&gt;:</b> Marca texto inserido recentemente, geralmente com uma linha sublinhada.</li>
+        <li><b>&lt;del&gt;:</b> Marca texto removido, geralmente com uma linha riscada.</li>
+        <li><b>&lt;b&gt;:</b> Define texto em negrito, sem indicar ênfase.</li>
+        <li><b>&lt;i&gt;:</b> Define texto em itálico, sem indicar ênfase.</li>
+        <li><b>&lt;u&gt;:</b> Define texto sublinhado, sem indicar ênfase.</li>
+        <li><b>&lt;code&gt;:</b> Define um trecho de código, geralmente usado para destacar código-fonte.</li>
+        <li><b>&lt;pre&gt;:</b> Define texto pré-formatado, preservando espaços e quebras de linha, ideal para exibir código ou texto com formatação específica.</li>
+        <li><b>&lt;blockquote&gt;:</b> Define uma citação em bloco, geralmente usada para destacar citações de outras fontes.</li>
+        <li><b>&lt;cite&gt;:</b> Define o título de uma obra, como um livro, filme ou artigo, geralmente usado em citações.</li>    
+        <li><b>&lt;dfn&gt;:</b> Define um termo que está sendo definido, geralmente usado em glossários ou definições.</li>
+        <li><b>&lt;abbr&gt;:</b> Define uma abreviação ou acrônimo, com a opção de fornecer uma descrição completa usando o atributo `title`.</li>
+        <li><b>&lt;time&gt;:</b> Representa um período de tempo ou uma data específica, com a opção de usar o atributo `datetime` para fornecer uma representação legível por máquina.</li>
+        <li><b>&lt;progress&gt;:</b> Exibe o progresso de uma tarefa em andamento, como o progresso de um upload ou download.</li>
+        <small><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/progress" target="_blank"> Saiba mais...</a></small></li>
+    </ul> 
+    <p>Essas são algumas das principais tags HTML que você usará com frequência. Cada uma delas tem um propósito específico e pode ser combinada para criar páginas web complexas.</p>
+    <h3>Exemplo Prático</h3>
+    <p>Vamos criar um exemplo prático de uma página HTML simples:</p>
+                <pre>
+                    <code>
+                        &lt;!DOCTYPE html&gt;       
+                        &lt;html lang="pt-BR"&gt;
+                        &lt;head&gt;    
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                            &lt;title&gt;Minha Página HTML&lt;/title&gt;    
+
+                        &lt;/head&gt;   
+                        &lt;body&gt;
+                            &lt;h1&gt;Bem-vindo à minha página!&lt;/h1&gt;
+                            &lt;p&gt;Este é um parágrafo de exemplo. Você pode adicionar mais conteúdo aqui.&lt;/p&gt;
+                            &lt;a href="https://www.example.com"&gt;Clique aqui&lt;/a&gt; para visitar um site.
+                            &lt;img src="https://via.placeholder.com/300" alt="Imagem de exemplo"&gt;
+                            &lt;h2&gt;Lista de Tarefas&lt;/h2&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;Tarefa 1&lt;/li&gt;
+                                &lt;li&gt;Tarefa 2&lt;/li&gt;
+                                &lt;li&gt;Tarefa 3&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;footer&gt;
+                                &lt;p&gt;Desenvolvido por &lt;a href="https://www.example.com"&gt;Seu Nome&lt;/a&gt;&lt;/p&gt;
+                            &lt;/footer&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code> 
+                </pre>
+    <p>Salve o arquivo com a extensão .html e abra-o em um navegador para ver o resultado. Você verá uma página com um título, parágrafo, link, imagem e uma lista de tarefas.</p>
+    
+    <hr>
+    <h2 id="novidades">HTML5 e suas novidades</h2>
+    <small>Descubra as novas funcionalidades do HTML5.</small><br>
+    <small><a href="#inicio">Início</a></small>
+    <p>HTML5 introduziu novas tags e atributos que facilitam o desenvolvimento web, como: <br><br> `&lt;article&gt;`, e `&lt;section&gt;`, e `&lt;nav&gt;`<br>
+      <br>  Essas novas tags ajudam a estruturar melhor o conteúdo e melhorar a acessibilidade.</p>
+    <h3>Novas Tags do HTML5</h3>
+    <ul>
+        <li><b>&lt;article&gt;:</b> Define um conteúdo independente, como um artigo de blog ou uma notícia.</li>
+        <li><b>&lt;section&gt;:</b> Agrupa conteúdo relacionado em seções distintas.</li>
+        <li><b>&lt;nav&gt;:</b> Define uma seção de navegação com links para outras páginas.</li>
+        <small><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/details" target="_blank"> Saiba mais...</a></small></li>
+    </ul>
+
+    <hr>
+    <h2 id="desafio">Como entregar seu desafio de projeto</h2>
+    <small>Saiba como submeter seu projeto final de forma correta.</small><br>
+    <small><a href="#inicio">Início</a></small>
+    <p><b>Crie os arquivos conforme as instruções do desafio:</b> normalmente, é esperado ao menos um arquivo .html, e talvez outros como .css, imagens ou scripts, dependendo do escopo.</p>
+
+    <p>✅ <b>Revise os requisitos:</b> Garanta que todos os itens solicitados no enunciado estejam implementados corretamente. Verifique se os elementos HTML estão funcionando como esperado.</p>
+
+    <p>✅ <b>Organize a estrutura de pastas Mantenha seus arquivos organizados e nomeados de forma clara:</b> Isso facilita tanto para você quanto para quem for corrigir.</p>
+
+    <p>✅ <b>Envie os arquivos através da plataforma DIO:</b> Acesse o espaço do desafio na plataforma, clique em “Enviar Projeto” ou “Submeter Entrega”, e anexe os arquivos necessários ou cole o link do repositório se for solicitado via GitHub.</p>
+
+    <p>✅ <b>Preencha informações adicionais (se houver):</b> Alguns desafios pedem comentários sobre seu processo, dificuldades ou aprendizados. Vale a pena caprichar!</p>
+
+    <p>✅ <b>Confirme a entrega:</b> Verifique se sua entrega foi registrada com sucesso. A plataforma geralmente mostra um status de “Enviado” ou “Aguardando avaliação”.</p>
+    
+
+    <hr>
+    <h2 id="desenvolvimento">Boas práticas de desenvolvimento</h2>   
+    <small>Conheça as melhores práticas para escrever código HTML limpo e eficiente.</small><br>
+    <small><a href="#inicio">Início</a></small>
+    <p>🔹 <b>Use indentação consistente:</b> Organize visualmente o código com espaçamento adequado. Isso facilita a leitura e manutenção por você e por outros desenvolvedores.</p>
+
+    <p>🔹 <b>Comente seu código:</b> Use comentários <!-- assim --> para explicar partes importantes ou trechos temporariamente desativados. Comentários são essenciais em projetos colaborativos.</p>
+
+    <p>🔹 <b>Priorize a semântica HTML:</b> Utilize tags que representam corretamente o conteúdo, como <b>&lt;header&gt;</b>, <b>&lt;main&gt;</b>, <b>&lt;article&gt;</b>, <b>&lt;footer&gt;</b>. Isso melhora a acessibilidade e o SEO da página.</p>
+
+    <p>🔹 <b>Evite código duplicado:</b> Se algo se repete muito, talvez seja hora de reorganizar o conteúdo ou separar em arquivos reutilizáveis.</p>
+
+    <p>🔹 <b>Organize os arquivos do projeto:</b> Crie pastas como css/, js/, img/ e index.html. Isso deixa seu projeto mais limpo e fácil de navegar.</p>
+
+    <p>🔹 <b>Mantenha nomes descritivos:</b> Dê nomes claros a arquivos, pastas e classes. Exemplo: menu-navegacao, form-contato, style.css.</p>
+
+    <p>🔹 <b>Teste em diferentes navegadores:</b> Nem todo navegador interpreta o HTML da mesma forma. Verifique a compatibilidade para garantir que tudo funcione bem em diferentes plataformas.</p>
+    
+    <hr>
+    <h2 id="referencia">Referências e recursos adicionais</h2>
+    <small>Encontre links úteis e materiais de estudo para aprofundar seus conhecimentos.</small><br>
+    <small><a href="#inicio">Início</a></small>
+    <p>Confira a documentação oficial do HTML5 e outros recursos online.</p>
+
+    <p> 🌐 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">MDN Web Docs (Mozilla)</a> Guia completo sobre HTML, atualizado e mantido por desenvolvedores experientes. Um dos melhores lugares para aprofundar conhecimentos técnicos.
+
+    <p> 🌐 <a href="https://www.w3schools.com/html/">W3Schools</a> Ideal para praticar e experimentar código diretamente no navegador. Ótimo para iniciantes e consultas rápidas.
+
+    <p> 🌐 <a href="https://html.spec.whatwg.org/multipage/">Documentação Oficial HTML5 (W3C)</a> Para quem deseja entender os padrões mais técnicos e avançados do HTML.
+
+
+</body>
+<br>
+<hr>
+<br><br>
+<footer>
+    <p style="text-align: center;">Desenvolvido por <a href="https://www.example.com">Kelven Alves de Sousa</a></p>
+</footer>
+
+</html>
